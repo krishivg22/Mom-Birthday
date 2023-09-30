@@ -1,0 +1,294 @@
+.navbar{
+    width:100vw;
+    position:fixed;
+    top:0px;
+    z-index: 2;
+}
+.greet{
+    height: 100vh;
+    background-image: url(./images/1.png);
+    background-size: contain;
+    display:flex;
+flex-direction: column;
+gap:20px;
+justify-content: center;
+align-items: center;
+}
+.name{
+    color: white;
+font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    font-size:7vw;
+}
+.wish{
+    color:red;
+    font-size:7.5vw ;
+}
+
+#two{
+font-family: serif;
+letter-spacing: 1vw;
+}
+#one{
+    font-family: 'Cedarville Cursive', cursive;
+}
+.images{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    gap:2vh;
+}
+.second{
+    height: 100vh;
+    background-image: url(./images/10.png);
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    gap:15vh;
+}
+.second h1{
+    text-align: center;
+    position: relative;
+    top:20px;
+    font-size: 90px;
+    color:#ffde59;
+    font-family: 'Dancing Script', cursive;  
+}
+#carouselExampleAutoplaying{
+    width:385px;
+}
+#carouselExampleAutoplaying img{
+border: 5px solid red;
+border-radius: 50%;
+border-style:outset ;
+}
+
+.images h2{
+    color:red;
+    font-family: 'Young Serif', serif;
+    font-size: 40px;
+}
+.images span{
+    display: inline-block;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+}
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+}
+
+  .compliment{
+    height:100vh;
+    background-image: url(./images/bg.jpeg) ,linear-gradient(to bottom,#D675A0 0%, #D675A0 50%, #4FE9EB 50%, #4FE9EB 100%) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.compliment div{
+    height:50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.compliment h1{
+    font-family: serif;
+    font-weight: 500;
+    font-size: 5vw;
+}
+.compliment p{
+    color: white;
+    font-size: 3vw;
+    font-family: 'Satisfy', cursive;
+    letter-spacing: 0.4vw;
+}
+@media(max-width: 550px){
+    .compliment{
+        flex-direction: column;
+    }
+    .compliment div{
+        width:75vw;
+        flex-direction: row;
+    justify-content: space-between;
+    }
+    .compliment p{
+        font-size:30px;
+        letter-spacing: 5px;
+    }
+    .second h1{
+        font-size:70px;
+    }
+    .second h2{
+        font-size:30px;
+    }
+    .second{
+        gap:30vh;
+    }
+.greet h1{
+    font-size:50px;
+}
+#carouselExampleAutoplaying{
+    width:70vw;
+}
+}
+.message{
+    height: 100vh;
+    background-image: url(./images/cake.jpg),linear-gradient(to right,#7B4A3C 0%,#F8DAC2 50%, #6B4846 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+}
+.content{
+    height:70vh;
+}
+.intro{
+    position: relative;
+    top:7vh;
+    text-align: center;
+    color:#ff4c68;
+    font-family: 'Dancing Script', cursive;
+    font-size:50px;
+}
+.content ul{
+position: relative;
+top: 15vh;
+color: #ff4c68;
+font-weight: 500;
+font-family: 'Dancing Script', cursive;
+text-align: center;
+}
+li{
+    padding:2px;
+}
+.end{
+    position:relative;
+    top:20vh;
+    color:white;
+    text-align: center;
+    font-size: 25px;
+    font-family: serif;
+    font-weight: 550;
+    letter-spacing: 0.25vw;
+}
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+ 
+@media(min-width:700px){
+    .intro{
+ font-size:60px;
+    }
+    .end{
+        font-size:40px;
+    }
+    .content ul{
+        font-size: 22px;
+        top:10vh;
+    }
+}
+
+.lineup {
+    animation-name: del, anim-lineUp;
+animation-duration: calc(0.5s * var(--i)), 2s;
+animation-iteration-count: 1, 1;
+animation-delay: 0s, calc(0.5s * var(--i));
+animation-timing-function: linear, ease-out;
+  }
+  @keyframes del{
+    0%{
+   visibility: hidden;
+    }
+    100%{
+      visibility: hidden;
+    }
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .animate-character
+{
+    text-align: center;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+ 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+ 
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+h1 span{
+    display: inline-block;
+    animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+ 
+
+
+
+
+
+
+
